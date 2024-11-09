@@ -56,6 +56,31 @@ rare: 10%
 ไฟล์นี้จะถูกรันอัตโนมัติเมื่อ Docker container สำหรับ PostgreSQL เริ่มทำงาน ทำให้ฐานข้อมูลพร้อมใช้งานทันทีหลังจาก deploy
 
 # โครงสร้าง Code
+CT648_POKEMON_GASHAPON
+├── pokemon_gashapon_backend
+│   ├── .gitignore
+│   ├── bun.lockb
+│   ├── Dockerfile
+│   ├── index.ts
+│   ├── package-lock.json
+│   ├── package.json
+│   ├── README.md
+│   ├── server.js
+│   └── tsconfig.json
+├── pokemon_gashapon_front
+│   ├── public
+│   ├── src
+│   ├── bun.lockb
+│   ├── bunfig.toml
+│   ├── Dockerfile
+│   ├── package-lock.json
+│   ├── package.json 
+│   ├── tsconfig.json
+│   ├── yarn.lock
+├── README.md
+├── docker-compose.yml
+├── init.sql
+
 Frontend
    - ใช้ React TypeScript
    - ใช้ Axios สำหรับการเรียก API
@@ -66,15 +91,20 @@ Frontend
         randomCard: เก็บข้อมูล Pokémon ที่สุ่มได้
         dropRates: อัตราการดรอปของ Pokémon
         volume, isMuted: ควบคุมเสียงพื้นหลัง
+<img width="1430" alt="Screenshot 2567-11-09 at 15 14 52" src="https://github.com/user-attachments/assets/5ec6bbd0-9f0e-427c-b7ad-b659d4552c8b">
 
 Backend
    - ใช้ Express.js สำหรับสร้าง RESTful API
    - เชื่อมต่อกับ PostgreSQL ผ่าน pg module
    - ใช้ bcrypt สำหรับการเข้ารหัสรหัสผ่าน
+<img width="388" alt="Screenshot 2567-11-09 at 15 27 21" src="https://github.com/user-attachments/assets/a28064dd-779f-4d69-9c31-559a5426a492">
 
 Database
    - ใช้ PostgreSQL
    - มีการสร้างตารางและความสัมพันธ์ตามที่กำหนดใน init.sql
+     <img width="695" alt="Screenshot 2567-11-08 at 22 21 18" src="https://github.com/user-attachments/assets/edf247b3-31eb-4590-9e2a-ea890134a346">
+<img width="868" alt="Screenshot 2567-11-09 at 15 28 08" src="https://github.com/user-attachments/assets/a57ee7a5-8065-4d23-9304-a68c8c4b9b5d">
+
 # การทำงานของเกม
 - เริ่มเกม
      เมื่อผู้ใช้คลิกที่เครื่องกาชาปอง (handleMachineClick) จะเริ่มเกม และแสดงไข่ Pokémon
