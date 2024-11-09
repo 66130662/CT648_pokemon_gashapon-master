@@ -57,29 +57,7 @@ rare: 10%
 
 # โครงสร้าง Code
 CT648_POKEMON_GASHAPON
-├── pokemon_gashapon_backend
-│   ├── .gitignore
-│   ├── bun.lockb
-│   ├── Dockerfile
-│   ├── index.ts
-│   ├── package-lock.json
-│   ├── package.json
-│   ├── README.md
-│   ├── server.js
-│   └── tsconfig.json
-├── pokemon_gashapon_front
-│   ├── public
-│   ├── src
-│   ├── bun.lockb
-│   ├── bunfig.toml
-│   ├── Dockerfile
-│   ├── package-lock.json
-│   ├── package.json 
-│   ├── tsconfig.json
-│   ├── yarn.lock
-├── README.md
-├── docker-compose.yml
-├── init.sql
+<img width="297" alt="Screenshot 2567-11-09 at 15 42 28" src="https://github.com/user-attachments/assets/9c7b7fad-0e11-477a-b464-f544a3b250f8">
 
 Frontend
    - ใช้ React TypeScript
@@ -126,9 +104,9 @@ Database
    สำหรับ Database: แก้ไขไฟล์ init.sql หรือปรับแต่งการเชื่อมต่อใน Backend
 
 # Credit Database
-     ```
+
 https://www.kaggle.com/datasets/divyanshusingh369/complete-pokemon-library-32k-images-and-csv?resource=download
-     ```
+
 
 ## 4. วิธี Deploy
 
