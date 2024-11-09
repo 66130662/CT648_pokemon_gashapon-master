@@ -1,4 +1,3 @@
-<img width="979" alt="Screenshot 2567-11-09 at 17 10 49" src="https://github.com/user-attachments/assets/4f9d08e8-115a-49e8-99d6-423ceca4d6d3"># CT648_pokemon_gashapon
 ## 1. หลักการพัฒนา ด้วย React TypeScript, Node.js Backend และ PostgreSQL
 ![CT648_pokemon_gashapon drawio](https://github.com/user-attachments/assets/29b76ea8-6120-4dc0-a429-743658f10a63)
 
@@ -81,7 +80,8 @@ Database
    - ใช้ PostgreSQL
    - มีการสร้างตารางและความสัมพันธ์ตามที่กำหนดใน init.sql
      <img width="695" alt="Screenshot 2567-11-08 at 22 21 18" src="https://github.com/user-attachments/assets/edf247b3-31eb-4590-9e2a-ea890134a346">
-<img width="979" alt="Screenshot 2567-11-09 at 17 10 49" src="https://github.com/user-attachments/assets/ba4c914d-c5fb-4954-a140-67f5220c53ee">
+
+     <img width="979" alt="Screenshot 2567-11-09 at 17 10 49" src="https://github.com/user-attachments/assets/d7e80a6d-c6f2-48ff-899c-85e0fe7943fe">
 
 
 # การทำงานของเกม
