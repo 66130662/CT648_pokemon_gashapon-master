@@ -52,7 +52,7 @@ rare: 10%
    4. user_pokemon:การสะสม Pokemon ของผู้เล่น collection
    5. user_wl: บันทึกจำนวนครั้งผู้เล่น
 
-    ```    -- สร้างฐานข้อมูล
+      -- สร้างฐานข้อมูล
 CREATE DATABASE pokemon_db;
 
 -- ใช้ฐานข้อมูลที่สร้าง
@@ -123,7 +123,8 @@ CREATE TABLE user_pokemon (
     pokemon_id INT REFERENCES pokemon(pok_id),
     power_up_points INT DEFAULT 0,
     PRIMARY KEY (user_id, pokemon_id)
-);   ```
+);
+
    
 ไฟล์นี้จะถูกรันอัตโนมัติเมื่อ Docker container สำหรับ PostgreSQL เริ่มทำงาน ทำให้ฐานข้อมูลพร้อมใช้งานทันทีหลังจาก deploy
 
