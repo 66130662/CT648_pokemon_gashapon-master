@@ -52,6 +52,7 @@ rare: 10%
    4. user_pokemon:การสะสม Pokemon ของผู้เล่น collection
    5. user_wl: บันทึกจำนวนครั้งผู้เล่น
 
+```
       -- สร้างฐานข้อมูล
 CREATE DATABASE pokemon_db;
 
