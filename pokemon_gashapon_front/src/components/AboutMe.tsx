@@ -4,6 +4,10 @@ import { useNavigate } from "react-router-dom";
 import "./AboutMe.css";
 import teacher from "../assets/images/teacher.png";
 import student from "../assets/images/student.jpg";
+import Logo from "../assets/images/Logo.png";
+import Diagram from "../assets/images/Diagram.png";
+import structure from "../assets/images/structure.png";
+import Database from "../assets/images/Database.png";
 
 const AboutMe: React.FC = () => {
   const navigate = useNavigate(); // ใช้ useNavigate เพื่อจัดการการนำทาง
@@ -15,6 +19,12 @@ const AboutMe: React.FC = () => {
     >
       <section className="section1">
         <div className="section_about">
+          <img
+            src={Logo}
+            alt="Logo"
+            className="Logo"
+            style={{ width: "150px", height: "auto" }}
+          />
           <h1>
             Welcome to Computer Engineering College of Engineering and
             Technology
@@ -27,7 +37,7 @@ const AboutMe: React.FC = () => {
             src={teacher}
             alt="teacher"
             className="teacher"
-            style={{ width: "300px", height: "auto" }}
+            style={{ width: "200px", height: "auto" }}
           />
           <h3>ผู้ช่วยศาสตราจารย์ ดร.ชัยพร เขมะภาตะพันธ์</h3>
           <p>ผู้อำนวยการหลักสูตร</p>
@@ -38,10 +48,28 @@ const AboutMe: React.FC = () => {
 
       <section className="section">
         <h1>About Me - CT648 Pokemon Gashapon</h1>
-        <h2>1. หลักการพัฒนา</h2>
+        <h2>
+          1. หลักการพัฒนา ด้วย React TypeScript, Node.js Backend และ PostgreSQL
+        </h2>
+        <img
+          src={Diagram}
+          alt="Diagram"
+          className="Diagram"
+          style={{ width: "500px", height: "auto" }}
+        />
+        <p>โปรเจคถูกออกแบบมาประกอบด้วย 3 ส่วนหลัก:</p>
         <p>
-          การพัฒนาโปรเจกต์นี้ยึดหลักการออกแบบที่เน้นการสร้างระบบ RESTful API
-          ที่ใช้งานง่ายและปลอดภัย โดยมีหลักการสำคัญดังนี้:
+          1. Frontend: พัฒนาด้วย React TypeScript เพื่อสร้าง UI
+          ที่ตอบสนองและมีประสิทธิภาพ
+        </p>
+        <p>
+          2. Backend: พัฒนาด้วย Node.js กับ Express เพื่อสร้าง RESTful API
+          ที่รวดเร็วและมีประสิทธิภาพ
+        </p>
+        <p>
+          3.Database: ใช้ PostgreSQL เพื่อจัดเก็บข้อมูลผู้ใช้,
+          เก็บข้อมูลรูปภาพของโปเกมอน, เก็บข้อมูลพื้นฐานของโปเกมอน เช่น
+          ชื่อและระดับความหายาก, เก็บข้อมูลโปเกมอนที่ผู้ใช้สะสมไว้
         </p>
       </section>
 
@@ -115,39 +143,124 @@ const AboutMe: React.FC = () => {
           </li>
         </ul>
       </section>
+      <section className="section">
+        <h2>3. การใช้งาน init.sql</h2>
+        <p>
+          ไฟล์ init.sql ใช้สำหรับการสร้างโครงสร้างฐานข้อมูลเริ่มต้น
+          โดยมีการสร้างตารางดังนี้
+        </p>
+        <p>1. user_id: เก็บข้อมูลผู้ใช้งาน</p>
+        <p>2. pokemon: ใช้สำหรับสุ่มและจัดการข้อมูลโปเกมอน เก็บข้อมูลโปเกมอน</p>
+        <p>3. pic_poke: ภาพของ Pokemon</p>
+        <p>4. user_pokemon:การสะสม Pokemon ของผู้เล่น collection</p>
+        <p>5. user_wl: บันทึกจำนวนครั้งผู้เล่น</p>
+        <p>
+          ไฟล์นี้จะถูกรันอัตโนมัติเมื่อ Docker container สำหรับ PostgreSQL
+          เริ่มทำงาน ทำให้ฐานข้อมูลพร้อมใช้งานทันทีหลังจาก deploy
+        </p>
+        <h2>โครงสร้าง Code</h2>
+        <p>BreadcrumbsCT648_pokemon_gashapon-master</p>
+        <img
+          src={structure}
+          alt="structure"
+          className="structure"
+          style={{ width: "300px", height: "auto" }}
+        />
+        <h4>Frontend</h4>
+        <p>ใช้ React TypeScript</p>
+        <p>ใช้ Axios สำหรับการเรียก API</p>
+        <p>
+          สร้าง Component ใช้ React Function Component (React.FC)
+          พร้อมพารามิเตอร์ username และ onLogout ที่ส่งเข้ามาผ่าน props. ใช้
+          State และ Effect Hooks เช่น useState, useEffect
+          เพื่อจัดการข้อมูลและสถานะต่างๆ เช่น: isCracking: ตรวจสอบว่าไข่ Pokémon
+          กำลังแตกหรือไม่ randomCard: เก็บข้อมูล Pokémon ที่สุ่มได้ dropRates:
+          อัตราการดรอปของ Pokémon volume, isMuted: ควบคุมเสียงพื้นหลัง
+        </p>
+        <h4>Backend</h4>
+        <p>ใช้ Express.js สำหรับสร้าง RESTful API</p>
+        <p>เชื่อมต่อกับ PostgreSQL ผ่าน pg module</p>
+        <p>ใช้ bcrypt สำหรับการเข้ารหัสรหัสผ่าน</p>
+        <h4>Database</h4>
+        <p>ใช้ PostgreSQL</p>
+        <p>มีการสร้างตารางและความสัมพันธ์ตามที่กำหนดใน init.sql</p>
+        <img
+          src={Database}
+          alt="Database"
+          className="Database"
+          style={{ width: "400px", height: "auto" }}
+        />
+        <h2>การทำงานของเกม</h2>
+        <p>
+          เริ่มเกม เมื่อผู้ใช้คลิกที่เครื่องกาชาปอง (handleMachineClick)
+          จะเริ่มเกม และแสดงไข่ Pokémon
+        </p>
+        <p>
+          สุ่ม Pokémon เมื่อคลิกที่ไข่ (handleEggClick): ดึงข้อมูล Pokémon ผ่าน
+          API แสดงการ์ด Pokémon พร้อมสถิติต่างๆ (HP, Attack, Defense)
+          เก็บประวัติ Pokémon ที่ได้รับไว้ใน history
+        </p>
+        <p>
+          อัปเดตข้อมูล Pokémon ใช้ handlePokemonObtained เพื่อตรวจสอบว่า Pokémon
+          ที่ได้รับซ้ำหรือไม่ และอัปเดต Power-up Points ผ่าน API
+        </p>
+        <h2>การพัฒนาเพิ่มเติม</h2>
+        <p>หากต้องการพัฒนาหรือแก้ไขโค้ด</p>
+        <p>สำหรับ Frontend: แก้ไขไฟล์ใน Folder pokemon_gashapon_front</p>
+        <p>สำหรับ Backend: แก้ไขไฟล์ใน Folder pokemon_gashapon_backend</p>
+        <p>
+          สำหรับ Database: แก้ไขไฟล์ init.sql หรือปรับแต่งการเชื่อมต่อใน Backend
+        </p>
+        <h2>Credit Database </h2>
+        <p>datasets</p>
+        <p>
+          https://www.kaggle.com/datasets/divyanshusingh369/complete-pokemon-library-32k-images-and-csv?resource=download
+        </p>
+      </section>
 
       <section className="section">
-        <h2>3. วิธี Deploy</h2>
-        <h3>3.1 นำโค้ดทั้งหมดขึ้น GitHub</h3>
+        <h2>4. วิธี Deploy</h2>
+        <p>ข้อกำหนดเบื้องต้น</p>
+        <p>Node.js (v18)</p>
+        <p>Docker และ Docker Compose</p>
+        <p>PostgreSQL</p>
+        <p>Bun (สำหรับ Frontend)</p>
+        <h3>4.1 นำโค้ดทั้งหมดขึ้น GitHub</h3>
         <p>
-          โดยมีไฟล์ Dockerfile และ docker-compose.yml
-          สำหรับการจัดการสภาพแวดล้อมของโปรเจกต์:
+          โดยมีไฟล์ที่นี้มีบทบาทสำคัญในการ
+          จัดการการทำงานและการรันโปรเจกต์ในสภาพแวดล้อมของ Docker ดังนี้
+          Dockerfile (ทั้งใน Path ของ backend และ frontend)
         </p>
         <ul>
           <li>
             <strong>Dockerfile</strong> - กำหนดวิธีการสร้าง Docker image ของ
             backend และ frontend
+            ทำให้แอปพลิเคชันแต่ละส่วนสามารถรันในสภาพแวดล้อมที่เหมือนกันทุกครั้ง
+            ไม่ว่าจะรันที่ไหนก็ตาม
           </li>
           <li>
             <strong>docker-compose.yml</strong> -
-            รวบรวมทุกบริการในไฟล์เดียวสำหรับการรันพร้อมกัน
-          </li>
-          <li>
-            <strong>nginx.conf</strong> - ใช้ Nginx เป็น reverse proxy ระหว่าง
-            frontend และ backend
+            รวบรวมทุกบริการในไฟล์เดียวสำหรับการรันพร้อมกันทำให้การจัดการและการรันหลายบริการพร้อมกันง่ายขึ้น
+            โดยสามารถใช้คำสั่งเดียวในการรันทั้งโปรเจกต์
           </li>
         </ul>
 
-        <h3>3.2 Clone โปรเจกต์</h3>
+        <h3>4.2 Clone โปรเจกต์</h3>
+        <p>
+          เชื่อมต่อไปยังเซิร์ฟเวอร์ ใช้ SSH เพื่อเข้าถึงเซิร์ฟเวอร์ (เช่น AWS
+          EC2)
+        </p>
+        <p>Clone โปรเจกต์จาก GitHub ลงเซิร์ฟเวอร์</p>
         <pre>
-          git clone https://github.com/ARRUKlib/CT648_Pokamon_Slots.git cd
+          git clone
+          https://github.com/66130662/CT648_pokemon_gashapon-master.git cd
           CT648_pokemon_gashapon/
         </pre>
 
-        <h3>3.3 Build และ Start Services</h3>
+        <h3>4.3 Build และ Start Services</h3>
         <pre>sudo docker-compose up sudo docker-compose up --build -d</pre>
 
-        <h3>3.4 เข้าใช้งาน</h3>
+        <h3>4.4 เข้าใช้งาน</h3>
         <p>
           URL หรือ IP ของเซิร์ฟเวอร์:
           <br />
@@ -177,7 +290,7 @@ const AboutMe: React.FC = () => {
             src={student}
             alt="student"
             className="student"
-            style={{ width: "500px", height: "auto" }}
+            style={{ width: "300px", height: "auto" }}
           />
         </div>
       </section>
