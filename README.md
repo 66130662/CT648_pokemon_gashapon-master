@@ -52,20 +52,24 @@ rare: 10%
    4. user_pokemon:การสะสม Pokemon ของผู้เล่น collection
    5. user_wl: บันทึกจำนวนครั้งผู้เล่น
       -- สร้างฐานข้อมูล
+         ```
 CREATE DATABASE pokemon_db;
-
+   ```
 -- ใช้ฐานข้อมูลที่สร้าง
+   ```
 \c pokemon_db;
-
+   ```
 -- ตารางผู้ใช้งาน
+   ```
 CREATE TABLE user_id (
     user_id SERIAL PRIMARY KEY,
     user_name VARCHAR(50) NOT NULL UNIQUE,
     pass VARCHAR(255) NOT NULL,
     consecutive_pulls INT DEFAULT 0
 );
-
+   ```
 -- ตารางข้อมูล Pokémon
+   ```
 CREATE TABLE pokemon (
     pok_id SERIAL PRIMARY KEY,
     pok_name VARCHAR(50) NOT NULL UNIQUE,
@@ -98,16 +102,18 @@ CREATE TABLE pokemon (
     speed_max INT,
     poke_type_card VARCHAR(20) -- common, uncommon, rare
 );
-
+   ```
 -- ตารางภาพของ Pokémon
+   ```
 CREATE TABLE pic_poke (
     id SERIAL PRIMARY KEY,
     pok_id INT REFERENCES pokemon(pok_id),
     pok_name VARCHAR(50) NOT NULL UNIQUE,
     pok_image BYTEA NOT NULL
 );
-
+   ```
 -- ตาราง win/loss/draw ของผู้เล่น
+   ```
 CREATE TABLE user_wl (
     user_id INT REFERENCES user_id(user_id),
     win INT DEFAULT 0,
@@ -115,15 +121,16 @@ CREATE TABLE user_wl (
     draw INT DEFAULT 0,
     PRIMARY KEY (user_id)
 );
-
+   ```
 -- ตารางการสะสม Pokémon ของผู้เล่น
+   ```
 CREATE TABLE user_pokemon (
     user_id INT REFERENCES user_id(user_id),
     pokemon_id INT REFERENCES pokemon(pok_id),
     power_up_points INT DEFAULT 0,
     PRIMARY KEY (user_id, pokemon_id)
 );
-
+   ```
 ไฟล์นี้จะถูกรันอัตโนมัติเมื่อ Docker container สำหรับ PostgreSQL เริ่มทำงาน ทำให้ฐานข้อมูลพร้อมใช้งานทันทีหลังจาก deploy
 
 # โครงสร้าง Code
