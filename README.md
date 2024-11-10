@@ -53,23 +53,21 @@ rare: 10%
    5. user_wl: บันทึกจำนวนครั้งผู้เล่น
       -- สร้างฐานข้อมูล
       
-   ```
-CREATE DATABASE pokemon_db;
+   ```CREATE DATABASE pokemon_db;
    ```
 
  
 -- ใช้ฐานข้อมูลที่สร้าง
 
 
-      ```
-\c pokemon_db;
+      ```\c pokemon_db;
    ```
 
    
 -- ตารางผู้ใช้งาน
 
-   ```
-CREATE TABLE user_id (
+  
+   ```CREATE TABLE user_id (
     user_id SERIAL PRIMARY KEY,
     user_name VARCHAR(50) NOT NULL UNIQUE,
     pass VARCHAR(255) NOT NULL,
