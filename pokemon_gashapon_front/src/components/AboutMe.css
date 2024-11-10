@@ -15,7 +15,7 @@
 }
 
 h1 {
-  color: yellow;
+  color: black;
 }
 
 h2 {
@@ -81,4 +81,17 @@ pre {
   margin: 20px 0;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาสำหรับรูปภาพ */
+}
+
+.section_about img.Logo {
+  margin: 20px 20px 20px 0; /* เพิ่มระยะห่างทางด้านขวา */
+  float: left; /* จัดรูปให้อยู่ทางซ้าย */
+}
+
+.section img.Diagram {
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* เงาสำหรับรูปภาพ */
+  justify-content: center; /* จัดให้อยู่ตรงกลางแนวนอน */
+  align-items: center; /* จัดให้อยู่ตรงกลางแนวตั้ง */
 }
