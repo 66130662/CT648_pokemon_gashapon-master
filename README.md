@@ -125,6 +125,7 @@ CREATE TABLE user_pokemon (
     power_up_points INT DEFAULT 0,
     PRIMARY KEY (user_id, pokemon_id)
 );
+```
 
    
 ไฟล์นี้จะถูกรันอัตโนมัติเมื่อ Docker container สำหรับ PostgreSQL เริ่มทำงาน ทำให้ฐานข้อมูลพร้อมใช้งานทันทีหลังจาก deploy
