@@ -6,9 +6,12 @@
 1. **Frontend**: พัฒนาด้วย React TypeScript เพื่อสร้าง UI ที่ตอบสนองและมีประสิทธิภาพ
 2. **Backend**: พัฒนาด้วย Node.js กับ Express เพื่อสร้าง RESTful API ที่รวดเร็วและมีประสิทธิภาพ
 3. **Database**: ใช้ PostgreSQL เพื่อจัดเก็บข้อมูลผู้ใช้, เก็บข้อมูลรูปภาพของโปเกมอน, เก็บข้อมูลพื้นฐานของโปเกมอน เช่น ชื่อและระดับความหายาก, เก็บข้อมูลโปเกมอนที่ผู้ใช้สะสมไว้
+<img width="955" alt="Screenshot 2567-11-30 at 17 33 20" src="https://github.com/user-attachments/assets/4e194790-de6d-4213-80ae-e704067d4089">
 
 ## 2. API ที่สำคัญ
 API ที่พัฒนาขึ้นครอบคลุมทั้งการจัดการข้อมูลผู้ใช้และการเล่นเกม ซึ่งมีรายละเอียดดังนี้
+<img width="956" alt="Screenshot 2567-11-30 at 17 34 11" src="https://github.com/user-attachments/assets/35011811-c37c-4bea-8dc1-2e7f81b869d5">
+
 ### 2.1 API จัดการข้อมูลผู้ใช้
 #### POST /api/register
 - ลงทะเบียนผู้ใช้ใหม่โดยรับ user_name และ pass จาก client
@@ -126,7 +129,6 @@ CREATE TABLE user_pokemon (
     PRIMARY KEY (user_id, pokemon_id)
 );
 ```
-
    
 ไฟล์นี้จะถูกรันอัตโนมัติเมื่อ Docker container สำหรับ PostgreSQL เริ่มทำงาน ทำให้ฐานข้อมูลพร้อมใช้งานทันทีหลังจาก deploy
 
