@@ -1,5 +1,6 @@
 ## 1. หลักการพัฒนา ด้วย React TypeScript, Node.js Backend และ PostgreSQL
-![CT648_pokemon_gashapon drawio](https://github.com/user-attachments/assets/29b76ea8-6120-4dc0-a429-743658f10a63)
+![Uploading Diagram.png…]()
+
 
 โปรเจคถูกออกแบบมาประกอบด้วย 3 ส่วนหลัก:
 
