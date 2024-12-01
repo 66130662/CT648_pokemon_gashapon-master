@@ -1,5 +1,6 @@
 ## 1. หลักการพัฒนา ด้วย React TypeScript, Node.js Backend และ PostgreSQL
-![Diagram](https://github.com/user-attachments/assets/497f2c9f-e999-469c-af5e-7752926a3e91)
+![Diagram](https://github.com/user-attachments/assets/f0370ea7-c392-4d52-83b2-47961a8691b7)
+
 
 โปรเจคถูกออกแบบมาประกอบด้วย 3 ส่วนหลัก:
 
